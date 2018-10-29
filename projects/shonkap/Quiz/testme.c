@@ -14,7 +14,7 @@ char *inputString()
     char * string = (char*) calloc(6,sizeof(char));
     int i;
     for(i = 0;i<5;i++ ){
-      string[i] = inputchar();
+      string[i] = rand() % 26 + 97;
     }
     string[5] = '/0';
     return string;
