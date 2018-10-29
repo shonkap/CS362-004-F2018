@@ -11,12 +11,12 @@ char inputChar()
 
 char *inputString()
 {
-    char * string = (char*) calloc(8,sizeof(char));
+    char * string = (char*) calloc(6,sizeof(char));
     int i;
-    for(i = 0;i<7;i++ ){
+    for(i = 0;i<5;i++ ){
       string[i] = inputchar();
     }
-    string[7] = '/0';
+    string[5] = '/0';
     return string;
 }
 
