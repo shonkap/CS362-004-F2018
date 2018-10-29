@@ -26,7 +26,7 @@ int main () {
     int t1 = assert(r == -1);
 
     if(t1 == 0)
-        printf("test completed successfully! \n")
+        printf("test completed successfully! \n");
     else
         printf("test Failed! \n");
 }

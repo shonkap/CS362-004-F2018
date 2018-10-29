@@ -20,13 +20,13 @@ int main () {
     printf("\ntesting adventurer: \t");
   
     initializeGame(2, k, 10, &G);   
-    G.whoseturn = 1;
+    G.whoseTurn = 1;
     G.hand[1][0] = smithy;
     G.deckcount[1] = 5;
     ophandcount = G.deckcount[0];
     endTurn(&G);
 
-    G.whoseturn = 0;
+    G.whoseTurn = 0;
     G.hand[0][0] = gold;
     G.hand[0][0] = gold;
     G.deckcount[0] = 5;

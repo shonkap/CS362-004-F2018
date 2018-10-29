@@ -20,13 +20,13 @@ int main () {
     printf("\ntesting smithy: \t");
   
     initializeGame(2, k, 10, &G);   
-    G.whoseturn = 0;
+    G.whoseTurn = 0;
     G.hand[0][0] = smithy;
     G.deckcount[0] = 5;
     handcount = G.deckcount[0];
     endTurn(&G);
 
-    G.whoseturn = 1;
+    G.whoseTurn = 1;
     G.hand[1][0] = smithy;
     G.deckcount[0] = 5;
     ophandcount = G.deckcount[1];
