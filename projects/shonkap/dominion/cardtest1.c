@@ -8,6 +8,8 @@
 #define DEBUG 0
 #define NOISY_TEST 1
 
+//smithy
+
 int main () {
 
     int ophandcount, handcount, opdeckcount, deckcount;
@@ -34,11 +36,27 @@ int main () {
     int bonus = 1;
 
     cardEffect(smithy,1,2,3, &G,ophandcount,&bonus);
-    assert(ophandcount+2 == G.handCount[1]);
-    assert(opdeckcount-3 == G.deckCount[1]);
+    if(ophandcount+2 == G.handCount[1])
+        printf("test completed successfully! \n");
+    else
+        printf("test Failed! \n"); 
 
-    assert(handcount-3 == G.handCount[0]);
-    assert(deckcount-3 == G.deckCount[0]);
+    if(opdeckcount-3 == G.deckCount[1])
+        printf("test completed successfully! \n");
+    else
+        printf("test Failed! \n"); 
+
+
+
+    if(handcount-3 == G.handCount[0])
+        printf("test completed successfully! \n");
+    else
+        printf("test Failed! \n"); 
+
+    if(deckcount-3 == G.deckCount[0])
+        printf("test completed successfully! \n");
+    else
+        printf("test Failed! \n"); 
 
     /*
     if(t1 + t2 + t3 + t4 == 0)

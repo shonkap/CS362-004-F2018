@@ -7,6 +7,7 @@
 
 #define DEBUG 0
 #define NOISY_TEST 1
+//gardens
 
 int main () {
 
@@ -24,12 +25,8 @@ int main () {
     int bonus = 1;
     int r = cardEffect(gardens,1,2,3, &G,0,NULL);
 
-    assert(r == -1);
-
-    /*
-    if(t1 == 0)
+    if(r == -1)
         printf("test completed successfully! \n");
     else
         printf("test Failed! \n");
-        */
 }

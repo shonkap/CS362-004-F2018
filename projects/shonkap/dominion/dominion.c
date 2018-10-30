@@ -5,6 +5,8 @@
 #include <math.h>
 #include <stdlib.h>
 
+//should all be good now!!!!
+
 int compare(const void* a, const void* b) {
   if (*(int*)a > *(int*)b)
     return 1;
@@ -43,8 +45,8 @@ int initializeGame(int numPlayers, int kingdomCards[10], int randomSeed,
   //set up random number generator
   //gonna comment these out for a sec also 217.
   //****************
-  //SelectStream(1);
-  //PutSeed((long)randomSeed);
+  SelectStream(1);
+  PutSeed((long)randomSeed);
   
   //check number of players
   if (numPlayers > MAX_PLAYERS || numPlayers < 2)

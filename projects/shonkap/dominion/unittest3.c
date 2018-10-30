@@ -16,13 +16,22 @@ int main(){
 
   struct gameState G;
   int r = initializeGame(4, k, 10, &G);
-  assert(r == 0);
+  if(r == 0)
+      printf("test completed successfully! \n");
+  else
+        printf("test Failed! \n");
 
   G.whoseTurn = 0;
 
-  assert(whoseTurn(&G) == 0);
+  if(whoseTurn(&G) == 0)
+      printf("test completed successfully! \n");
+  else
+        printf("test Failed! \n");
 
   G.whoseTurn = 1;
 
-  assert(whoseTurn(&G) == 1);
+  if(whoseTurn(&G) == 1)
+      printf("test completed successfully! \n");
+  else
+        printf("test Failed! \n");
 }

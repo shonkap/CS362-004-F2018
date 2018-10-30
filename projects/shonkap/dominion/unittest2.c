@@ -16,19 +16,40 @@ int main(){
 
   struct gameState G;
   int r = initializeGame(4, k, 10, &G);
-  assert(r == 0);
+  if(r == 0)
+    printf("test completed successfully! \n");
+  else
+        printf("test Failed! \n");
   G.supplyCount[0] = 10;
   G.supplyCount[2] = 3;
   G.supplyCount[1] = 12;
 
-  assert(supplyCount(0,&G) == 10);
-  assert(G.supplyCount[0] == 10);
+  if(supplyCount(0,&G) == 10)
+  printf("test completed successfully! \n");
+  else
+        printf("test Failed! \n");
+  if(G.supplyCount[0] == 10)
+        printf("test completed successfully! \n");
+  else
+        printf("test Failed! \n");
 
-  assert(supplyCount(3,&G) == 3);
-  assert(G.supplyCount[3] == 3);
+  if(supplyCount(2,&G) == 3)
+        printf("test completed successfully! \n");
+  else
+        printf("test Failed! \n");
+  if(G.supplyCount[2] == 3)
+        printf("test completed successfully! \n");
+  else
+        printf("test Failed! \n");
 
-  assert(supplyCount(2,&G) == 12);
-  assert(G.supplyCount[2] == 12);
+  if(supplyCount(1,&G) == 12)
+        printf("test completed successfully! \n");
+  else
+        printf("test Failed! \n");
+  if(G.supplyCount[1] == 12)
+        printf("test completed successfully! \n");
+  else
+        printf("test Failed! \n");
 
    /*if(t1 + t2 + t3 + t4 == 0)
         printf("test completed successfully! \n");

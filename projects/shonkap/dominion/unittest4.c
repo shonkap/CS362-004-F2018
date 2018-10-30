@@ -8,7 +8,7 @@
 #define DEBUG 0
 #define NOISY_TEST 1
 
-//update coins
+//buycard
 int main(){
 
   int k[10] = {adventurer, council_room, feast, gardens, mine,
@@ -26,21 +26,33 @@ int main(){
   //test if none left
   G.supplyCount[3] = 0;
   G.numBuys = 3;
-  assert(buyCard(3,&G) == -1);
-
+  if(buyCard(3,&G) == -1)
+    printf("test completed successfully! \n");
+    else
+        printf("test Failed! \n");
   //check not enough coins
   G.coins = 0;
   G.numBuys = 3;
-  assert(buyCard(3,&G) == -1);
-
+  if(buyCard(3,&G) == -1)
+    printf("test completed successfully! \n");
+    else
+        printf("test Failed! \n");
   //test to buy card
   G.coins = 20;
   G.numBuys = 3;
   G.supplyCount[3] = 10;
-  assert(buyCard(3,&G) == 0);
-  assert(G.numBuys = 2);
-  assert(G.coins = 12);
-
+  if(buyCard(3,&G) == 0)
+    printf("test completed successfully! \n");
+  else
+    printf("test Failed! \n");
+  if(G.numBuys = 2)
+    printf("test completed successfully! \n");
+    else
+        printf("test Failed! \n");
+  if(G.coins = 12)
+    printf("test completed successfully! \n");
+    else
+        printf("test Failed! \n");
 
 
    /*if(t1 + t2 + t3 + t4 == 0)

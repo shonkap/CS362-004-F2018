@@ -8,6 +8,8 @@
 #define DEBUG 0
 #define NOISY_TEST 1
 
+//greatHall
+
 int main () {
 
     int k[10] = {adventurer, council_room, feast, gardens, mine,
@@ -26,11 +28,16 @@ int main () {
 
     cardEffect(great_hall,1,2,3,&test,ophandcount,NULL);
 
-    assert(G.handCount[G.whoseTurn]+1 == test.handCount[test.whoseTurn]);
-
+    if(G.handCount[G.whoseTurn]+1 == test.handCount[test.whoseTurn])
+        printf("test completed successfully! \n");
+    else
+        printf("test Failed! \n");
 
     cardEffect(great_hall,1,2,3,&test1,ophandcount,NULL);
-    assert(G.handCount[G.whoseTurn]+1 == test.handCount[test1.whoseTurn]);
+    if(G.handCount[G.whoseTurn]+1 == test.handCount[test1.whoseTurn])
+        printf("test completed successfully! \n");
+    else
+        printf("test Failed! \n");
 
     /*
     if(t1+t2 == 0 )

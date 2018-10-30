@@ -8,6 +8,8 @@
 #define DEBUG 0
 #define NOISY_TEST 1
 
+//adventurer
+
 int main () {
 
     int ophandcount, handcount, opdeckcount, deckcount;
@@ -35,14 +37,39 @@ int main () {
     int bonus = 1;
 
     int r = cardEffect(adventurer,1,2,3,&G,0,&bonus);
-    assert(handcount+2 == G.handCount[0]);
-    assert(deckcount > fullDeckCount(0,0,&G));
+    if(handcount+2 == G.handCount[0])
+        printf("test completed successfully! \n");
+    else
+        printf("test Failed! \n");  
 
-    assert(ophandcount == G.handCount[0]);
-    assert(opdeckcount == G.deckCount[0]);
+    if(deckcount > fullDeckCount(0,0,&G))
+        printf("test completed successfully! \n");
+    else
+        printf("test Failed! \n");  
 
-    assert(G.hand[0][1] == gold && G.hand[0][2] == gold);
-    assert(r == 0);
+
+
+    if(ophandcount == G.handCount[0])
+        printf("test completed successfully! \n");
+    else
+        printf("test Failed! \n");
+
+    if(opdeckcount == G.deckCount[0])
+        printf("test completed successfully! \n");
+    else
+        printf("test Failed! \n");  
+
+
+
+    if(G.hand[0][1] == gold && G.hand[0][2] == gold)
+        printf("test completed successfully! \n");
+    else
+        printf("test Failed! \n");
+
+    if(r == 0)
+        printf("test completed successfully! \n");
+    else
+        printf("test Failed! \n");  
     //int t4 = ASSERT(r == );
 
     /*
