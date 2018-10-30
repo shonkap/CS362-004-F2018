@@ -16,6 +16,7 @@ int main () {
     struct gameState G;
     struct gameState test;
     struct gameState test1;
+    int ophandcount = G.deckCount[1];
 
     printf("\ntesting Great Hall: \t");
 
@@ -23,16 +24,18 @@ int main () {
     initializeGame(2, k, 1000, &test);
     initializeGame(2, k, 1000, &test1);
 
-    cardEffect(great_hall,1,2,3 &test,ophandcount,NULL);
+    cardEffect(great_hall,1,2,3,&test,ophandcount,NULL);
 
-    int t1 = assert(G.handcount[G.whoseTurn]+1 == test.handcount[test.whoseTurn])
+    assert(G.handCount[G.whoseTurn]+1 == test.handCount[test.whoseTurn]);
 
 
-    cardEffect(great_hall,1,2,3 &test1,ophandcount,NULL);
-    int t2 = assert(G.handcount[G.whoseTurn]+1 == test.handcount[test1.whoseTurn])
+    cardEffect(great_hall,1,2,3,&test1,ophandcount,NULL);
+    assert(G.handCount[G.whoseTurn]+1 == test.handCount[test1.whoseTurn]);
 
+    /*
     if(t1+t2 == 0 )
         printf("test completed successfully! \n");
     else
         printf("test Failed! \n");
+        */
 }

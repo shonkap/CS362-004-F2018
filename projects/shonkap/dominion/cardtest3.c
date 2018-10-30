@@ -21,12 +21,15 @@ int main () {
 
     initializeGame(2, k, 10, &G);
 
-    int r = cardEffect(gardens,1,2,3 &G,ophandcount,NULL);
+    int bonus = 1;
+    int r = cardEffect(gardens,1,2,3, &G,0,NULL);
 
-    int t1 = assert(r == -1);
+    assert(r == -1);
 
+    /*
     if(t1 == 0)
         printf("test completed successfully! \n");
     else
         printf("test Failed! \n");
+        */
 }

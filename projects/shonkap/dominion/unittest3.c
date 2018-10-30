@@ -15,18 +15,14 @@ int main(){
 	       remodel, smithy, village, baron, great_hall};
 
   struct gameState G;
-  initializeGame(4, k, 1, &G);
+  int r = initializeGame(4, k, 10, &G);
+  assert(r == 0);
 
   G.whoseTurn = 0;
 
-  int t1 = assert(whoseTurn(G) == 0);
+  assert(whoseTurn(&G) == 0);
 
   G.whoseTurn = 1;
 
-  int t2 = assert(whoseTurn(G) == 1);
-
-  if(t1 + t2 == 0)
-        printf("test completed successfully! \n");
-    else
-        printf("test Failed! \n");
+  assert(whoseTurn(&G) == 1);
 }

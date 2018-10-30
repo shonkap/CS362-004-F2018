@@ -22,24 +22,28 @@ int main () {
     initializeGame(2, k, 10, &G);   
     G.whoseTurn = 0;
     G.hand[0][0] = smithy;
-    G.deckcount[0] = 5;
-    handcount = G.deckcount[0];
+    G.deckCount[0] = 5;
+    handcount = G.deckCount[0];
     endTurn(&G);
 
     G.whoseTurn = 1;
     G.hand[1][0] = smithy;
-    G.deckcount[0] = 5;
-    ophandcount = G.deckcount[1];
+    G.deckCount[0] = 5;
+    ophandcount = G.deckCount[1];
 
-    int r = cardEffect(smithy,1,2,3 &G,ophandcount,NULL);
-    int t1 = ASSERT(ophandcount+2 == G.handcount[1]);
-    int t2 = ASSERT(opdeckcount-3 == G.deckcount[1]);
+    int bonus = 1;
 
-    int t3 = ASSERT(handcount-3 == G.handcount[0]);
-    int t4 = ASSERT(deckcount-3 == G.deckcount[0]);
+    cardEffect(smithy,1,2,3, &G,ophandcount,&bonus);
+    assert(ophandcount+2 == G.handCount[1]);
+    assert(opdeckcount-3 == G.deckCount[1]);
 
+    assert(handcount-3 == G.handCount[0]);
+    assert(deckcount-3 == G.deckCount[0]);
+
+    /*
     if(t1 + t2 + t3 + t4 == 0)
         printf("test completed successfully! \n");
     else
         printf("test Failed! \n");
+        */
 }

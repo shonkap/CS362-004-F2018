@@ -41,6 +41,8 @@ int initializeGame(int numPlayers, int kingdomCards[10], int randomSeed,
   int j;
   int it;			
   //set up random number generator
+  //gonna comment these out for a sec also 217.
+  //****************
   //SelectStream(1);
   //PutSeed((long)randomSeed);
   
@@ -212,7 +214,7 @@ int shuffle(int player, struct gameState *state) {
   /* SORT CARDS IN DECK TO ENSURE DETERMINISM! */
 
   while (state->deckCount[player] > 0) {
-    card = floor(random() * state->deckCount[player]);
+    card = floor(Random() * state->deckCount[player]);
     newDeck[newDeckPos] = state->deck[player][card];
     newDeckPos++;
     for (i = card; i < state->deckCount[player]-1; i++) {
@@ -580,6 +582,7 @@ int drawCard(int player, struct gameState *state)
   return 0;
 }
 
+
 //*****************
 //*****************
 //*****************
@@ -853,9 +856,6 @@ int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState
 
   int tributeRevealedCards[2] = {-1, -1};
   int temphand[MAX_HAND];// moved above the if statement
-  int drawntreasure=0;
-  int cardDrawn;
-  int z = 0;// this is the counter for the temp hand
   int minereturn;
   int remodelreturn;
   if (nextPlayer > (state->numPlayers - 1)){

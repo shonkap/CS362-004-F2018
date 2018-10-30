@@ -10,20 +10,25 @@
 
 //update coins
 int main(){
+    printf("blah");
 
   int k[10] = {adventurer, council_room, feast, gardens, mine,
 	       remodel, smithy, village, baron, great_hall};
 
   struct gameState G;
-  initializeGame(4, k, 1, &G);
-  G.coins = 0;
+  printf("def didnt make it");
+  int r = initializeGame(4, k, 1000, &G);
+  printf("didnt make it");
+  assert(r == 0);
+   G.coins = 0;
    G.hand[0][0] = gold;
    G.hand[0][1] = gold;
    G.hand[0][2] = gold;
    G.hand[0][3] = gold;
    updateCoins(0,&G,0);
+   printf("here");
 
-   int t1 = assert(G.coins == 12);
+   assert(G.coins == 12);
    G.coins = 0;
 
    G.hand[0][0] = silver;
@@ -32,7 +37,7 @@ int main(){
    G.hand[0][3] = silver;
    updateCoins(0,&G,0);
 
-   int t2 = assert(G.coins == 8);
+   assert(G.coins == 8);
    G.coins = 0;
 
    G.hand[0][0] = copper;
@@ -41,7 +46,7 @@ int main(){
    G.hand[0][3] = copper;
    updateCoins(0,&G,0);
 
-   int t3 = assert(G.coins == 4);
+   assert(G.coins == 4);
 
    G.hand[0][0] = smithy;
    G.hand[0][1] = smithy;
@@ -49,13 +54,15 @@ int main(){
    G.hand[0][3] = smithy;
    updateCoins(0,&G,0);
 
-   int t4 = assert(G.coins == 4);
+   assert(G.coins == 4);
+   
 
-   if(t1 + t2 + t3 + t4 == 0)
+   /*if(t1 + t2 + t3 + t4 == 0)
         printf("test completed successfully! \n");
     else
         printf("test Failed! \n");
-
+        */
+printf("test completed successfully! \n");
 
 
 }
