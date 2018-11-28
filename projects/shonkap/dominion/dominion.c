@@ -596,6 +596,7 @@ int drawCard(int player, struct gameState *state)
 void cardsmithy(int card, int choice1, int choice2, int choice3, struct gameState *state, int handPos, int *bonus, int currentPlayer)
 {
   //+3 Cards
+  int i;
   for (i = 0; i < 2; i++)
 	{
 	  drawCard(currentPlayer, state);
