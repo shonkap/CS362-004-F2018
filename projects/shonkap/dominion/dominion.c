@@ -659,10 +659,10 @@ int doAdventurer(int z, int drawntreasure, int currentPlayer, int cardDrawn, str
 
     else
     {
-      // should be temphand[++z] = cardDrawn;
-      temphand[++z] = cardDrawn;
+      // was temphand[++z] = cardDrawn;
+      temphand[z] = cardDrawn;
       state->handCount[currentPlayer]--; //this should just remove the top card (the most recently drawn one).
-      //z++;
+      z++; //added back
     }
   }
   
