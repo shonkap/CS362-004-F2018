@@ -790,7 +790,7 @@ int doMine(int i, int j, int currentPlayer, int handPos, int choice1, int choice
 int doSmithy(int i, int currentPlayer, int handPos, struct gameState *state)
 {
   //+3 Cards
-  for (i = 0; i < 3; i++)
+  for (i = 0; i < 3; i++) //
     drawCard(currentPlayer, state);
   
   //discard card from hand
